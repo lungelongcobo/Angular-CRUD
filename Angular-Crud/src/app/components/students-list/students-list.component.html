@@ -1,3 +1,25 @@
-<p>
-  students-list works!
-</p>
+<div class="container my-5">
+  <h2 class="mb-3">Students</h2>
+  <table class="table table-striped" *ngIf="students && students.length > 0">
+    <thead>
+       <tr>
+         <th scope="col">Student ID</th>
+         <th scope="col">Student Name</th>
+         <th scope="col">Course</th>
+         <th scope="col">Email</th>
+         <th scope="col">Phone</th>
+       </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let student of students">
+           <th scope="row">{{student.id}}</th>
+           <td>{{student.name}}</td>
+           <td>{{student.course}}</td>
+           <td>{{student.email}}</td>
+           <td>{{student.phone}}</td>
+       </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!students || students.length <= 0 ">No Students Enrolled</p>
+</div>
+
