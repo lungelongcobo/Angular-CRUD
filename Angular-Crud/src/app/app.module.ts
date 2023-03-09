@@ -3,15 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { StudentsListComponent } from './components/students-list/students-list.component';
+import { StudentsListComponent } from './components/students/students-list/students-list.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentRegistrationComponent } from './components/students/student-registration/student-registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    StudentsListComponent
+    StudentsListComponent,
+    StudentRegistrationComponent
   ],
   imports: [
     BrowserModule,

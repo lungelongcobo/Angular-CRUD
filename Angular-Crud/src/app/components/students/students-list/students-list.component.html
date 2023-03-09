@@ -1,5 +1,6 @@
 <div class="container my-5">
   <h2 class="mb-3">Students</h2>
+  <button type="button" class="btn btn-outline-primary" routerLink="registration">Add Student</button>
   <table class="table table-striped" *ngIf="students && students.length > 0">
     <thead>
        <tr>
@@ -20,6 +21,7 @@
        </tr>
     </tbody>
   </table>
-  <p *ngIf="!students || students.length <= 0 ">No Students Enrolled</p>
+  <p *ngIf="(!students || students.length <= 0) && !loading ">No Students Enrolled</p>
+  <p *ngIf="loading">Loading Students....</p>
 </div>
 

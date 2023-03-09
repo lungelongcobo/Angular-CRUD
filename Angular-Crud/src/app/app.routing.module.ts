@@ -1,12 +1,17 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
-import { StudentsListComponent } from "./components/students-list/students-list.component";
+import { StudentRegistrationComponent } from "./components/students/student-registration/student-registration.component";
+import { StudentsListComponent } from "./components/students/students-list/students-list.component";
 
 const routes: Routes = [
   {
     path: 'students',
     component: StudentsListComponent
+  },
+  {
+    path: 'students/registration',
+    component: StudentRegistrationComponent
   }
 ];
 
